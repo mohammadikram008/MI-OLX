@@ -4,6 +4,7 @@
   position: fixed;
   width: 100vw;
   z-index: 999;
+  /* margin-bottom: 10px; */
 }
 
 .headerChildDiv {
@@ -12,7 +13,11 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.brandName{
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 5px;
+}
 .placeSearch {
   width: 16em;
   height: 48px;

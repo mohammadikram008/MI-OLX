@@ -56,7 +56,8 @@ function Header() {
     <div className="headerParentDiv">
       <div className="headerChildDiv">
         <div className="brandName">
-          <OlxLogo></OlxLogo>
+          <h1 >MI</h1>
+          {/* <OlxLogo></OlxLogo> */}
         </div>
         <div className="placeSearch">
           <input type="text" 
