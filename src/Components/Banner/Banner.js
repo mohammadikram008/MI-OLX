@@ -1,11 +1,42 @@
 import React, { useState } from "react";
 import DynamicPosts from "../DynamicPosts/DynamicPosts";
-
+import { UncontrolledCarousel  } from 'reactstrap';
 import "./Banner.css";
-
+import img1 from '../../assets/images/img1.jpeg'
+import img2 from '../../assets/images/img2.jpeg'
+import img3 from '../../assets/images/img3.jpeg'
+import img4 from '../../assets/images/img4.jpeg'
+import img5 from '../../assets/images/banner copy.png'
 function Banner() {
   let [category, setCategory] = useState();
-  
+  const items = [
+    {
+        src: `${img1}`,
+        // altText: 'Slide 1',
+
+        // caption: 'Slide 1',
+        // header: 'Buying Real State inFeet'
+    },
+    {
+        src: `${img2}`,
+        // altText: 'Slide 2',
+        // caption: 'Slide 2',
+        // header: 'Sale Real State in Feet'
+    },
+    {
+
+        src: `${img3}`,
+        // altText: 'Slide 3',
+        // caption: 'Slide 3',
+        // header: 'Hold Real State in Feet'
+    },
+    {
+      src: `${img4}`,
+      // altText: 'Slide 3',
+      // caption: 'Slide 3',
+      // header: 'Hold Real State in Feet'
+  }
+];
   return (
     <div className="bannerParentDiv">
       <div className="bannerChildDiv">
@@ -37,7 +68,8 @@ function Banner() {
           </div>
         </div>
         <div className="banner">
-          <img src="../../../Images/banner copy.png" alt="" />
+        <UncontrolledCarousel items={items} />
+          {/* <img src="../../../Images/banner copy.png" alt="" /> */}
         </div>
       </div>
      { category!=null && <DynamicPosts category={category}/>  }
